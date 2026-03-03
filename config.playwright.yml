@@ -1,21 +1,4 @@
 #ddev-generated
-hooks:
-  pre-start:
-    # If Playwright is enabled, make sure we get any changes.
-    - exec-host: |
-        ([[ -f .ddev/web-build/Dockerfile.playwright ]] && \
-          cp .ddev/web-build/disabled.Dockerfile.playwright .ddev/web-build/Dockerfile.playwright) || true
-    - exec-host: |
-        if [[ -f .ddev/web-build/Dockerfile.playwright ]]
-        then
-          rm -rf .ddev/web-build/playwright
-          cp -r test/playwright .ddev/web-build/
-        fi
-  post-start:
-    # Clean up the playwright directory copied for builds.
-    # We want to remove this otherwise future ddev get's will not copy in
-    # changes to the web-build directory.
-    - exec-host: rm -rf .ddev/web-build/playwright
 web_environment:
   - DISPLAY=:1
 # We add the sleep so this doesn't error out when not using playwright.
