@@ -1,7 +1,9 @@
 #!/bin/sh
 #ddev-generated
 
-cd test/playwright || exit 1
+npm install
+npx playwright install
+npx playwright install-deps
 
 if [ -f yarn.lock ]; then
   yarn && yarn playwright "$@"
