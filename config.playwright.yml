@@ -1,6 +1,7 @@
 #ddev-generated
 web_environment:
   - DISPLAY=:1
+  - PLAYWRIGHT_BROWSERS_PATH=/opt/playwright/
 # We add the sleep so this doesn't error out when not using playwright.
 web_extra_daemons:
   - name: "kasmvnc"
@@ -15,5 +16,3 @@ web_extra_exposed_ports:
     container_port: 8444
     http_port: 8443
     https_port: 8444
-web_environment:
-  - PLAYWRIGHT_BROWSERS_PATH=/opt/playwright/
