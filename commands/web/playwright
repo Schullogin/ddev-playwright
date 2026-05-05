@@ -1,12 +1,3 @@
-#!/bin/sh
-#ddev-generated
+#!/usr/bin/env sh
 
-npm install
-npx playwright install
-npx playwright install-deps
-
-if [ -f yarn.lock ]; then
-  yarn && yarn playwright "$@"
-else
-  npm ci && npx playwright "$@"
-fi
+npx playwright "$@"
