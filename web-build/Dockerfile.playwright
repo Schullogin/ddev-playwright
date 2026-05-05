@@ -41,8 +41,8 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     mkdir -p /home/$username/playwright-helper/ && \
     cd /home/$username/playwright-helper/  && \
     npm init -y && \
-    npm install -D @playwright/test && \
-    npx playwright install --with-deps && \
+    PLAYWRIGHT_BROWSERS_PATH=/opt/playwright/ npm install -D @playwright/test && \
+    PLAYWRIGHT_BROWSERS_PATH=/opt/playwright/ npx playwright install --with-deps chromium && \
     rm -rf /home/$username/playwright-helper/
 
 # Install kasmvnc for remote access.
