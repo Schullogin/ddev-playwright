@@ -15,3 +15,5 @@ web_extra_exposed_ports:
     container_port: 8444
     http_port: 8443
     https_port: 8444
+web_environment:
+  - PLAYWRIGHT_BROWSERS_PATH=/opt/playwright/
