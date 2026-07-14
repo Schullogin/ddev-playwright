@@ -1,7 +1,7 @@
 #ddev-generated
 web_environment:
   - DISPLAY=:1
-  - PLAYWRIGHT_BROWSERS_PATH=/opt/playwright/
+  - PLAYWRIGHT_BROWSERS_PATH=/var/www/html/.ddev/playwright/browsers/
 # We add the sleep so this doesn't error out when not using playwright.
 web_extra_daemons:
   - name: "kasmvnc"
