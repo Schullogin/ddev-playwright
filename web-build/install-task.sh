@@ -345,7 +345,6 @@ End of functions from https://github.com/client9/shlib
 ------------------------------------------------------------------------
 EOF
 
-PROJECT_NAME="task"
 OWNER=go-task
 REPO="task"
 BINARY=task
