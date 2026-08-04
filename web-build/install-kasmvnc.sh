@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #ddev-generated
 
-if [ $(arch) == "aarch64" ]; then
+if [ "$(arch)" == "aarch64" ]; then
   KASM_ARCH=arm64
 else
   KASM_ARCH=amd64
