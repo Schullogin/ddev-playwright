@@ -9,5 +9,5 @@ fi;
 
 RELEASE=$(lsb_release --short --codename)
 
-wget https://github.com/kasmtech/KasmVNC/releases/download/v1.4.0/kasmvncserver_"${RELEASE:-bookworm}"_1.4.0_${KASM_ARCH}.deb
+wget https://github.com/kasmtech/KasmVNC/releases/download/v1.5.0/kasmvncserver_"${RELEASE:-bookworm}"_1.5.0_${KASM_ARCH}.deb
 sudo apt-get install -y ./kasmvncserver*.deb
